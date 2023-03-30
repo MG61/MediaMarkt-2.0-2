@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AuthNoActionBar"
+    tools:context=".Svyaz.History"
+    android:id="@+id/mainLayout">
+
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/purple_200"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="2"
+            android:src="@drawable/ic_baseline_arrow_back_24"></ImageView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="11"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="История покупок"
+
+            android:layout_marginStart="25dp"
+            android:textSize="25sp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_all"
+        android:padding="8dp"
+        android:layout_below="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
